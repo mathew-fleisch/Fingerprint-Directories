@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# add /usr/local/bin to the path
+echo /usr/local/bin > exiftool-path
+cp exiftool-path /etc/paths.d/exiftool
+
+# remove old Unix-installed versions from /opt/local and /usr/local
+# (old OS X installed versions would be removed automatically by the installer)
+sudo rm -rf /opt/local/bin/exiftool /opt/local/bin/lib/Image/ExifTool* /opt/local/bin/lib/File/RandomAccess*
+sudo rm -rf /usr/local/bin/exiftool /usr/local/bin/lib/Image/ExifTool* /usr/local/bin/lib/File/RandomAccess*
+
+exit 0
