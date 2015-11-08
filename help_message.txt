@@ -24,7 +24,7 @@ Optional Arguments:
 					to include. Possible: "md5","sha1","sha256"
 					All included by default.
 	
-	-f --format 			Space delimited list of what format the
+	-f --format 			Comma delimited list of what format the
 					output will be. Possible: "sql","csv","tsv"
 					Default: "sql"
 					
