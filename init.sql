@@ -1,5 +1,6 @@
 CREATE TABLE `files` (
   `id` int(255) unsigned NOT NULL,
+  `source_id` int(20) NOT NULL,
   `bundle_skip` tinyint(1) NOT NULL DEFAULT '0',
   `file` text,
   `filename` text,
@@ -7,7 +8,7 @@ CREATE TABLE `files` (
   `md5_checksum` varchar(33) DEFAULT NULL,
   `sha1_checksum` varchar(41) DEFAULT NULL,
   `sha256_checksum` varchar(65) DEFAULT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id`,`source_id`),
   KEY `md5_index` (`md5_checksum`),
   KEY `sha1_index` (`sha1_checksum`),
   KEY `sha256_index` (`sha256_checksum`)
