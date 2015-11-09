@@ -17,11 +17,13 @@ file size, checksums and uses the exiftool to gather other metadata. The results
 are then available in a few standard formats. 
 
 Required Arguments:
+
 	-o --output-dir			Select a directory for the output files
 
 	-t --target-dir			Space delimited list of directories to
 	               			fingerprint.
 Optional Arguments:
+
 	-c --checksums			Space delimited list of what hash alg
 					to include. Possible: "md5","sha1","sha256"
 					All included by default.
